@@ -3,12 +3,15 @@
     
     if(isset($_POST['submit'])){
         $username = htmlentities($_POST['username']);
+        $password = htmlentities($_POST['password']);
 
-        $ok = $_POST['username'];
-    setcookie('auth', $ok, time()+3600);
+    $ok = $_POST['username'];
+        setcookie('auth', $ok, time()+3600);
+    $ok = $_POST['password'];
+        setcookie('auth', $ok, time()+3600);
 
 
-    header('location: loggedin.php');
+    header('Location: loggedin.php');
 }
 
 ?>
