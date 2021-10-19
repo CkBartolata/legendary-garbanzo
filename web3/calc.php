@@ -3,10 +3,14 @@
 <body>
     <?php
         # test if input is_numeric
-        if(is_numeric($val1) && is_numeric($val2)){
+        $val1 = $_POST['val1'];
+        $val2 = $_POST['val2'];
+
+        if (is_numeric($val1) && is_numeric($val2)){
             
             # test if calc is not null
-            if(is_null($val1) && is_null($val2)){
+            if(isset($_POST['calc'])){
+                $calc = $_POST['calc'];
                 
                 # switch statement for value of calc    
                 switch($calc){
