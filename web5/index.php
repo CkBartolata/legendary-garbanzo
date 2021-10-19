@@ -1,5 +1,14 @@
 <?php
+session_start();
 
+    if(isset($_SESSION['visitCount'])){
+        $_SESSION['visitCount'] = $_SESSION['visitCount'] + 1;
+    
+    } else {
+        $_SESSION['visitCount'] = 1;
+
+        echo "You have visited this page ".$_SESSION['visitCount'];
+}
 ?>
 
 <h1>Hello</h1>
