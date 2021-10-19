@@ -1,5 +1,14 @@
 <?php
    // test cookies if is set, display if set
+
+   if(count($_COOKIE) > 0){
+    echo'There are '.count($_COOKIE). 'cookies saved<br>';
+    } else {
+        echo 'There are no cookies saved<br>';
+        }
+
+
+
 ?>
 <html lang="en">
 <head>
