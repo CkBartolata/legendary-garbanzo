@@ -1,18 +1,13 @@
 <?php
 // set cookies
     
-    if(isset($_POST['submit'])){
-        $username = htmlentities($_POST['username']);
-        $password = htmlentities($_POST['password']);
-
-    $ok = $_POST['username'];
-        setcookie('auth', $ok, time()+3600);
-    $ok = $_POST['password'];
-        setcookie('auth', $ok, time()+3600);
-
-
+if(isset($_POST['submit'])){
+    $ok = htmlentities($_POST['username']);
+    setcookie('auth'. $ok, time() + 3600);
     header('Location: loggedin.php');
-}
+    
+    
+}  
 
 ?>
 <html lang="en">
